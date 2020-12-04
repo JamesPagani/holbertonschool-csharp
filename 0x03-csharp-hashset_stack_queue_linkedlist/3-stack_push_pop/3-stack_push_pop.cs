@@ -19,7 +19,7 @@ class MyStack
             Console.WriteLine("Stack is empty");
 
         // Print if aStack contains the item given in search
-        Console.WriteLine("Stack contains {0}: {1}", search, aStack.Contains(search));
+        Console.WriteLine("Stack contains \"{0}\": {1}", search, aStack.Contains(search));
 
         // If aStack contains the item in search, remove all items up to (and including) search
         if (aStack.Contains(search))

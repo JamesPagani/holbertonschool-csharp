@@ -18,7 +18,7 @@ class MyQueue
         aQueue.Enqueue(newItem);
 
         // Print if the queue has the element in search
-        Console.WriteLine("Queue contains {0}: {1}", search, aQueue.Contains(search));
+        Console.WriteLine("Queue contains \"{0}\": {1}", search, aQueue.Contains(search));
 
         // If the item is there, dequeue items up to (and including) the item
         while (aQueue.Dequeue() != search);
