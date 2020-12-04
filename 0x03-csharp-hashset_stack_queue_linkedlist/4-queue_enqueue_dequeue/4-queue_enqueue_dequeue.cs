@@ -21,7 +21,8 @@ class MyQueue
         Console.WriteLine("Queue contains \"{0}\": {1}", search, aQueue.Contains(search));
 
         // If the item is there, dequeue items up to (and including) the item
-        while (aQueue.Dequeue() != search);
+        if (aQueue.Contains(search))
+            while (aQueue.Dequeue() != search);
 
         return aQueue;
     }
