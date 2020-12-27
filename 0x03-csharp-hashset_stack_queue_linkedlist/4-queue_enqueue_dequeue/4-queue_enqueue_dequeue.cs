@@ -12,7 +12,10 @@ class MyQueue
         Console.WriteLine("Number of items: {0}", aQueue.Count);
 
         // Print the item at the top of the queue without removing it
-        Console.WriteLine("First item: {0}", aQueue.Peek());
+        if (aQueue.Count == 0)
+            Console.WriteLine("Queue is empty");
+        else
+            Console.WriteLine("First item: {0}", aQueue.Peek());
 
         // Add the new item to the queue
         aQueue.Enqueue(newItem);
