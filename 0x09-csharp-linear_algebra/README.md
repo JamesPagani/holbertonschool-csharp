@@ -1,4 +1,4 @@
-#0x09. C# - Linear Algebra
+# 0x09. C# - Linear Algebra
 
 ## About this project
 Due to the importance of Linear Algebra and computer graphics in general, this project is dedicated to reviwing Linear Algebra.
