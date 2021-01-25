@@ -25,7 +25,7 @@ class MatrixMath
             {
                 for (int k = 0; k < 2; k++)
                 {
-                    skewedMatrix[i, j] += matrix[i, k] * shearMatrix[k, j];
+                    skewedMatrix[i, j] += matrix[i, k] * shearMatrix[j, k];
                 }
             }
         }

@@ -53,6 +53,7 @@ class MatrixMath
             det = (a*e*i) + (b*f*g) + (c*d*h) - (a*f*h) - (b*d*i) - (c*e*g);
         }
         
-        return det;
+        return Math.Round(det, 2);
     }
 }
+    

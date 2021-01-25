@@ -18,7 +18,7 @@ class MatrixMath
             {
                 for (int k = 0; k < 2; k++)
                 {
-                    rotatedMatrix[i, j] += matrix[i, k] * rotationMatrix[k, j];
+                    rotatedMatrix[i, j] += matrix[i,k] * rotationMatrix[j,k];
                 }
             }
         }

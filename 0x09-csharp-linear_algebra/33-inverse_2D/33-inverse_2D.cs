@@ -19,7 +19,7 @@ class MatrixMath
         {
             for (int j = 0; j < inverseMatrix.GetUpperBound(1)+1; j++)
             {
-                inverseMatrix[i,j] *= 1 / det;
+                inverseMatrix[i,j] *= Math.Round(1 / det, 2);
             }
         }
 
