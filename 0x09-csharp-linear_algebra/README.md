@@ -41,16 +41,16 @@ This project is divided acording to the topic reviewed.
 11. Matrix transposition
     - 25-matrix_transpose: A **C#** method that takes a matrix and transposes it.
 12. Determinant of a matrix
-    - 26-determinant_2D
-    - 27-determinant_3D
-    - 28-determinant
+    - 26-determinant_2D: Finding the determinant of a 2D matrix.
+    - 27-determinant_3D: Finding the determinant of a 3D matrix.
+    - 28-determinant: A **C#** method that finds the determinant of a square matrix (2D or 3D).
 13. Cross product
-    - 29-cross_product
-    -
+    - 29-cross_product: Calculating the cross/vector product of two 3D vectors.
+    - 30-cross_product A **C#** method that calculates the cross product of two 3D vectors.
 14. Inverse of a matrix
-    - 31-inverse_2D
-    - 32-inverse_3D
-    -
+    - 31-inverse_2D: Calculating the inverse of a 2D vector.
+    - 32-inverse_3D: Calculating the inverse of a 3D vector.
+    - 33-inverse_2D: A **C#** method that calculates the inverse of a 2D matrix.
 
 
 *Jaime Andrés Gálvez Villamarin*

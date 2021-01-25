@@ -6,7 +6,7 @@ class MatrixMath
     ///<summary>Shears a square 2D matrix by a given factor (and axis).</summary>
     public static double[,] Shear2D(double[,] matrix, char direction, double factor)
     {
-        int x, j;
+        double x, y;
         double[,] shearMatrix;
         double[,] skewedMatrix = new double[2,2]{{0,0},{0,0}};
 
@@ -25,9 +25,10 @@ class MatrixMath
             {
                 for (int k = 0; k < 2; k++)
                 {
-                    skewedMatrix[i, j] += shearMatrix[i, k] * matrix[k, j];
+                    skewedMatrix[i, j] += matrix[i, k] * shearMatrix[k, j];
                 }
             }
         }
+        return skewedMatrix;
     }
 }
