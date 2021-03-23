@@ -1,0 +1,4 @@
+*-main.cs
+bin/
+obj/
+.vscode/
