@@ -71,17 +71,15 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 ///<summary>A door.</summary>
 class Door : Base, IInteractive
 {
-
-
     ///<summary>Create a new door with a name.</summary>
-    public Door(string name)
+    public Door(string Name = "Door")
     {
-        this.name = name;
+        this.name = Name;
     }
 
     ///<summary>Try to open the door.</summary>
     public void Interact()
     {
-        Console.WriteLine($"You try to open {this.name}. It's locked.");
+        Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
 }

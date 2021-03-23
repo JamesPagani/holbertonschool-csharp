@@ -71,18 +71,16 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 ///<summary>A door.</summary>
 class Door : Base, IInteractive
 {
-
-
     ///<summary>Create a new door with a name.</summary>
-    public Door(string name)
+    public Door(string Name = "Door")
     {
-        this.name = name;
+        this.name = Name;
     }
 
     ///<summary>Try to open the door.</summary>
     public void Interact()
     {
-        Console.WriteLine($"You try to open {this.name}. It's locked.");
+        Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
 }
 
@@ -94,15 +92,15 @@ class Decoration : Base, IInteractive, IBreakable
     public int durability {get; set;}
 
     ///<summary>Create a new instance of Decoration</summary>
-    public Decoration(string Name = "Decoration", int Durability = 1, bool IsQuestItem = false)
+    public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
-        if (Durability <= 0)
+        if (durability <= 0)
         {
             throw new Exception("Durability must be greater than 0");
         }
-        this.name = Name;
-        this.durability = Durability;
-        this.isQuestItem = IsQuestItem;    
+        this.name = name;
+        this.durability = durability;
+        this.isQuestItem = isQuestItem;    
     }
 
     ///<summary>Interact with the decoration.</summary>

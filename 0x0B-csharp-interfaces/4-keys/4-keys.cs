@@ -94,15 +94,15 @@ class Decoration : Base, IInteractive, IBreakable
     public int durability {get; set;}
 
     ///<summary>Create a new instance of Decoration</summary>
-    public Decoration(string Name = "Decoration", int Durability = 1, bool IsQuestItem = false)
+    public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
-        if (Durability <= 0)
+        if (durability <= 0)
         {
             throw new Exception("Durability must be greater than 0");
         }
-        this.name = Name;
-        this.durability = Durability;
-        this.isQuestItem = IsQuestItem;    
+        this.name = name;
+        this.durability = durability;
+        this.isQuestItem = isQuestItem;    
     }
 
     ///<summary>Interact with the decoration.</summary>
@@ -138,10 +138,10 @@ class Key : Base, ICollectable
 {
     public bool isCollected {get; set;}
     
-    public Key(string Name = "Key", bool IsCollected = false)
+    public Key(string name = "Key", bool isCollected = false)
     {
-        this.name = Name;
-        this.isCollected = IsCollected;
+        this.name = name;
+        this.isCollected = isCollected;
     }
 
     public void Collect()
