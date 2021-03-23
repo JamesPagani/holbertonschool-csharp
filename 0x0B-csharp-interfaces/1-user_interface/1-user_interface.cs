@@ -43,27 +43,5 @@ abstract class Base
 ///<summary>A class that inherits from a class and interfaces.</summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    ///<summary>Durability of the instance.</summary>
-    public int durability {get; set;}
-    
-    ///<summary>Has this instance been collected?</summary>
-    public bool isCollected {get; set;}
 
-    ///<summary>Interact with something</summary>
-    public void Interact()
-    {
-        
-    }
-
-    ///<summary>Break the insstance.</summary>
-    public void Break()
-    {
-        
-    }
-
-    ///<summary>Collect this instance.</summary>
-    public void Collect()
-    {
-        
-    }
 }
