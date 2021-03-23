@@ -41,10 +41,26 @@ class Queue<T>
         }
         else
         {
-            tail.Next = head;
+            tail.Next = newNode;
             tail = newNode;
         }
         count++;
+    }
+
+    ///<summary>Removes the head node from the queue and returns it's value.</summary>
+    public T Dequeue()
+    {
+        Node oldNode;
+
+        if (count == 0)
+        {
+            Console.WriteLine("Queue is empty");
+            return default(T);
+        }
+        oldNode = head;
+        head = head.Next;
+        count--;
+        return oldNode.Value;
     }
 
     ///<summary>Return the amount of nodes in the queue.</summary>

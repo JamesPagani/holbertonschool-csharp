@@ -41,10 +41,52 @@ class Queue<T>
         }
         else
         {
-            tail.Next = head;
+            tail.Next = newNode;
             tail = newNode;
         }
         count++;
+    }
+
+    ///<summary>Removes the head node from the queue and returns it's value.</summary>
+    public T Dequeue()
+    {
+        Node oldNode;
+
+        if (count == 0)
+        {
+            Console.WriteLine("Queue is empty");
+            return default(T);
+        }
+        oldNode = head;
+        head = head.Next;
+        count--;
+        return oldNode.Value;
+    }
+
+    ///<summary>Return the value of the head node without removing it.</summary>
+    public T Peek()
+    {
+        if (count == 0)
+        {
+            Console.WriteLine("Queue is empty");
+            return default(T);
+        }
+        return head.Value;
+    }
+
+    ///<summary>Print the contents of ALL the nodes in the queue.</summary>
+    public void Print()
+    {
+        Node guide;
+        if (count == 0)
+            Console.WriteLine("Queue is empty");
+        else
+        {
+            for (guide = head; guide != null; guide = guide.Next)
+            {
+                Console.WriteLine(guide.Value);
+            }
+        }
     }
 
     ///<summary>Return the amount of nodes in the queue.</summary>
