@@ -52,18 +52,18 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
     ///<summary>Interact with something</summary>
     public void Interact()
     {
-        throw new NotImplementedException();
+        
     }
 
     ///<summary>Break the insstance.</summary>
     public void Break()
     {
-        throw new NotImplementedException();
+        
     }
 
     ///<summary>Collect this instance.</summary>
     public void Collect()
     {
-        throw new NotImplementedException();
+        
     }
 }
