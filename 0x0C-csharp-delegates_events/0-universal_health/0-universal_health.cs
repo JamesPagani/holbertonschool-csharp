@@ -4,13 +4,13 @@ using System;
 public class Player
 {
     // Player name
-    private string name {get;}
+    private string name;
 
     // Maximum hit points
-    private float maxHP{get;}
+    private float maxHP;
 
     // Current hit points
-    private float hp {get;}
+    private float hp;
 
     ///<summary>Initiate a new player instance.</summary>
     public Player(string name = "Player", float maxHP = 100f){
