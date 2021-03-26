@@ -21,12 +21,12 @@ public delegate float CalculateModifier(float baseValue, Modifier modifier);
 public class CurrentHPArgs : EventArgs
 {
     ///<summary>Stores current hit points.</summary>
-    public float currentHP {get;}
+    public float currentHp {get;}
 
     ///<summary>Creates a new instance, carrying this instance remaining hit points.</summary>
-    public CurrentHPArgs(float newHP)
+    public CurrentHPArgs(float newHp)
     {
-        this.currentHP = newHP;
+        this.currentHp = newHp;
     }
 }
 
