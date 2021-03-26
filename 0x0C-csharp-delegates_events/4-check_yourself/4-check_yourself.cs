@@ -37,7 +37,7 @@ public class Player
     private string name {get; set;}
 
     // Maximum hit points
-    private float maxHP{get; set;}
+    private float maxHp{get; set;}
 
     // Current hit points
     private float hp {get; set;}
@@ -49,18 +49,18 @@ public class Player
     event EventHandler<CurrentHPArgs> HPCheck;
 
     ///<summary>Initiate a new player instance.</summary>
-    public Player(string name = "Player", float maxHP = 100f)
+    public Player(string name = "Player", float maxHp = 100f)
     {
-        if (maxHP <= 0)
+        if (maxHp <= 0)
         {
-            this.maxHP = 100f;
+            this.maxHp = 100f;
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
         }
         else
         {
-            this.maxHP = maxHP;
+            this.maxHp = maxHp;
         }
-        this.hp = this.maxHP;
+        this.hp = this.maxHp;
         this.name = name;
         this.status = $"{this.name} is ready to go!";
         HPCheck = CheckStatus;
@@ -69,7 +69,7 @@ public class Player
     ///<summary>Print to the console the health of this player.</summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{this.name} has {this.hp} / {this.maxHP} health");
+        Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
     }
 
     ///<summary>Damages this player, subtracting its HP.</summary>
@@ -93,8 +93,8 @@ public class Player
     {
         if (newHP < 0)
             this.hp = 0;
-        else if (newHP > this.maxHP)
-            this.hp = maxHP;
+        else if (newHP > this.maxHp)
+            this.hp = maxHp;
         else
             this.hp = newHP;
         HPCheck(this, new CurrentHPArgs(this.hp));
@@ -121,13 +121,13 @@ public class Player
     // Prints this instance status regarding its remaining HP.
     private void CheckStatus(object sender, CurrentHPArgs e)
     {
-        if (this.hp == this.maxHP)
+        if (this.hp == this.maxHp)
             Console.WriteLine($"{name} is in perfect health!");
-        else if (this.hp < this.maxHP && this.hp >= this.maxHP / 2)
+        else if (this.hp < this.maxHp && this.hp >= this.maxHp / 2)
             Console.WriteLine($"{name} is doing well!");
-        else if (this.hp < this.maxHP / 2 && this.hp >= this.maxHP / 4)
+        else if (this.hp < this.maxHp / 2 && this.hp >= this.maxHp / 4)
             Console.WriteLine($"{name} isn't doing too great...");
-        else if (this.hp < this.maxHP / 4 && this.hp > 0)
+        else if (this.hp < this.maxHp / 4 && this.hp > 0)
             Console.WriteLine($"{name} need help!");
         else
             Console.WriteLine($"{name} is knocked out!");

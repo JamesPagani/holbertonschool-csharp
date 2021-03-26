@@ -24,30 +24,30 @@ public class Player
     private string name {get; set;}
 
     // Maximum hit points
-    private float maxHP{get; set;}
+    private float maxHp{get; set;}
 
     // Current hit points
     private float hp {get; set;}
 
     ///<summary>Initiate a new player instance.</summary>
-    public Player(string name = "Player", float maxHP = 100f){
-        if (maxHP <= 0)
+    public Player(string name = "Player", float maxHp = 100f){
+        if (maxHp <= 0)
         {
-            this.maxHP = 100f;
+            this.maxHp = 100f;
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
         }
         else
         {
-            this.maxHP = maxHP;
+            this.maxHp = maxHp;
         }
-        this.hp = this.maxHP;
+        this.hp = this.maxHp;
         this.name = name;
     }
 
     ///<summary>Print to the console the health of this player.</summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{this.name} has {this.hp} / {this.maxHP} health");
+        Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
     }
 
     ///<summary>Damages this player, subtracting its HP.</summary>
@@ -72,8 +72,8 @@ public class Player
     {
         if (newHP < 0)
             this.hp = 0;
-        else if (newHP > this.maxHP)
-            this.hp = maxHP;
+        else if (newHP > this.maxHp)
+            this.hp = maxHp;
         else
             this.hp = newHP;
     }
