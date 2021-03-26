@@ -46,7 +46,7 @@ public class Player
     private string status;
 
     ///<summary>Check the current HP, sending a status acording to this instance's remaining hit points.</summary>
-    event EventHandler<CurrentHPArgs> HPCheck;
+    EventHandler<CurrentHPArgs> HPCheck;
 
     ///<summary>Initiate a new player instance.</summary>
     public Player(string name = "Player", float maxHp = 100f)
