@@ -34,16 +34,16 @@ public class CurrentHPArgs : EventArgs
 public class Player
 {
     // Player name
-    private string name {get; set;}
+    private string name;
 
     // Maximum hit points
-    private float maxHp{get; set;}
+    private float maxHp;
 
     // Current hit points
-    private float hp {get; set;}
+    private float hp;
 
     // The status of this instance regarding its current hitpoints.    
-    private string status {get; set;}
+    private string status;
 
     ///<summary>Check the current HP, sending a status acording to this instance's remaining hit points.</summary>
     event EventHandler<CurrentHPArgs> HPCheck;

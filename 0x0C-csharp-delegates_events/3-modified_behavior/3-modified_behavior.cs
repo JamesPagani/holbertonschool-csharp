@@ -21,13 +21,13 @@ public delegate float CalculateModifier(float baseValue, Modifier modifier);
 public class Player
 {
     // Player name
-    private string name {get; set;}
+    private string name;
 
     // Maximum hit points
-    private float maxHp{get; set;}
+    private float maxHp;
 
     // Current hit points
-    private float hp {get; set;}
+    private float hp;
 
     ///<summary>Initiate a new player instance.</summary>
     public Player(string name = "Player", float maxHp = 100f){
