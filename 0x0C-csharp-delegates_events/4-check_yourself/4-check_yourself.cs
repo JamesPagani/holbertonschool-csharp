@@ -121,13 +121,13 @@ public class Player
     // Prints this instance status regarding its remaining HP.
     private void CheckStatus(object sender, CurrentHPArgs e)
     {
-        if (this.hp == this.maxHp)
+        if (e.currentHp == this.maxHp)
             Console.WriteLine($"{name} is in perfect health!");
-        else if (this.hp < this.maxHp && this.hp >= this.maxHp / 2)
+        else if (e.currentHp < this.maxHp && this.hp >= this.maxHp / 2)
             Console.WriteLine($"{name} is doing well!");
-        else if (this.hp < this.maxHp / 2 && this.hp >= this.maxHp / 4)
+        else if (e.currentHp < this.maxHp / 2 && this.hp >= this.maxHp / 4)
             Console.WriteLine($"{name} isn't doing too great...");
-        else if (this.hp < this.maxHp / 4 && this.hp > 0)
+        else if (e.currentHp < this.maxHp / 4 && this.hp > 0)
             Console.WriteLine($"{name} need help!");
         else
             Console.WriteLine($"{name} is knocked out!");
