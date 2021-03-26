@@ -128,7 +128,7 @@ public class Player
         else if (e.currentHp < this.maxHp / 2 && this.hp >= this.maxHp / 4)
             Console.WriteLine($"{name} isn't doing too great...");
         else if (e.currentHp < this.maxHp / 4 && this.hp > 0)
-            Console.WriteLine($"{name} need help!");
+            Console.WriteLine($"{name} needs help!");
         else
             Console.WriteLine($"{name} is knocked out!");
     }

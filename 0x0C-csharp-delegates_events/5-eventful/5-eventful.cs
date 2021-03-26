@@ -21,12 +21,12 @@ public delegate float CalculateModifier(float baseValue, Modifier modifier);
 public class CurrentHPArgs : EventArgs
 {
     ///<summary>Stores current hit points.</summary>
-    public float currentHP {get;}
+    public float currentHp {get;}
 
     ///<summary>Creates a new instance, carrying this instance remaining hit points.</summary>
-    public CurrentHPArgs(float newHP)
+    public CurrentHPArgs(float newHp)
     {
-        this.currentHP = newHP;
+        this.currentHp = newHp;
     }
 }
 
@@ -46,7 +46,7 @@ public class Player
     private string status;
 
     ///<summary>Check the current HP, sending a status acording to this instance's remaining hit points.</summary>
-    event EventHandler<CurrentHPArgs> HPCheck;
+    EventHandler<CurrentHPArgs> HPCheck;
 
     ///<summary>Initiate a new player instance.</summary>
     public Player(string name = "Player", float maxHp = 100f)
@@ -128,7 +128,7 @@ public class Player
         else if (this.hp < this.maxHp / 2 && this.hp >= this.maxHp / 4)
             Console.WriteLine($"{name} isn't doing too great...");
         else if (this.hp < this.maxHp / 4 && this.hp > 0)
-            Console.WriteLine($"{name} need help!");
+            Console.WriteLine($"{name} needs help!");
         else
             Console.WriteLine($"{name} is knocked out!");
     }
@@ -136,7 +136,7 @@ public class Player
     ///<summary>Displays a warning when at low health or dead.</summary>
     private void HPValueWarning(object sender, CurrentHPArgs e)
     {
-        if (e.currentHP == 0)
+        if (e.currentHp == 0)
         {
             Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine("Health has reached zero!");
@@ -153,7 +153,7 @@ public class Player
     ///<summary></summary>
     public void OnCheckStatus(CurrentHPArgs e)
     {
-        if (e.currentHP <= this.maxHp / 4f)
+        if (e.currentHp <= this.maxHp / 4f)
         {
             HPCheck += HPValueWarning;
         }
