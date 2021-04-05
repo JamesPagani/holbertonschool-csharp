@@ -2,12 +2,17 @@
 
 namespace InventoryLibrary
 {
+    ///<summary>A class that contains common info for each inventory instance.</summary>
     public class BaseClass
     {
-        private string id {get;}
-        private DateTime date_created {get;}
-        private DateTime date_updated {get; set;}
+        ///<summary>This instance ID (GUID).</summary>
+        public string id {get;}
+        ///<summary>The date this instance was created.</summary>
+        public DateTime date_created {get;}
+        ///<summary>The date this instance's info was updated.</summary>
+        public DateTime date_updated {get; set;}
 
+        ///<summary>Create a new instance of BaseClass.</summary>
         public BaseClass()
         {
             this.id = Guid.NewGuid().ToString();
@@ -15,6 +20,7 @@ namespace InventoryLibrary
             this.date_updated = this.date_created;
         }
 
+        ///<summary>Used when reloading a stored instance.</summary>
         public BaseClass(string id, DateTime date_created, DateTime date_updated)
         {
             this.id = id;
