@@ -163,14 +163,31 @@ class RoomObjects
 {
     public static void IterateAction(List<Base> roomObjects, Type type)
     {
-        Type[] interfaces;
         foreach (var obj in roomObjects)
         {
-            interfaces = obj.GetType().GetInterfaces();
-            foreach (Type iface in interfaces)
+            if (Equals(type, typeof(IInteractive)))
             {
-                if (iface.Equals(typeof(IInteractive)))
-                    obj.Interact();
+                if (obj.GetType().GetInterface("IInteractive") != null)
+                {
+                    IInteractive tmp = obj as IInteractive;
+                    tmp.Interact();
+                }
+            }
+            else if (Equals(type, typeof(IBreakable)))
+            {
+                if (obj.GetType().GetInterface("IBreakable") != null)
+                {
+                    IBreakable tmp = obj as IBreakable;
+                    tmp.Break();
+                } 
+            }
+            else if (Equals(type, typeof(ICollectable)))
+            {
+                if (obj.GetType().GetInterface("ICollectable") != null)
+                {
+                    ICollectable tmp = obj as ICollectable;
+                    tmp.Collect();
+                }
             }
         }
     }
