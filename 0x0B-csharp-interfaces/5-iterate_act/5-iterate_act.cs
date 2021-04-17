@@ -83,7 +83,7 @@ class Door : Base, IInteractive
     ///<summary>Try to open the door.</summary>
     public void Interact()
     {
-        Console.WriteLine($"You try to open {this.name}. It's locked.");
+        Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
 }
 
